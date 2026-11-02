@@ -1,6 +1,6 @@
 /* ==========================================================================
    DESIGN TOKENS & SYSTEM VARIABLES
-   Clean Minimalist Theme with Light/Dark Modes
+   Major Palette: Espresso (#5B4632), Champagne (#f4d9a0), Amber (#c8792c)
    ========================================================================== */
 
 :root {
@@ -50,112 +50,109 @@
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
-  /* Dynamic Neon & Chromatic Color Tokens */
-  --neon-cyan: #00f2fe;
-  --neon-blue: #4facfe;
-  --neon-purple: #7928ca;
-  --neon-magenta: #ff0080;
-  --neon-emerald: #10b981;
-  --neon-amber: #f59e0b;
 
-  /* Dynamic Multi-Color Gradients */
-  --gradient-aurora: linear-gradient(135deg, #00f2fe 0%, #4facfe 30%, #7928ca 70%, #ff0080 100%);
-  --gradient-electric: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
-  --gradient-btn: linear-gradient(135deg, #2563eb 0%, #6366f1 50%, #7928ca 100%);
-  --gradient-btn-hover: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-  --gradient-border-beam: conic-gradient(from 0deg, #00f2fe, #4facfe, #7928ca, #ff0080, #00f2fe);
+  /* Major Brand Colors */
+  --color-espresso: #5B4632;
+  --color-champagne: #f4d9a0;
+  --color-amber: #c8792c;
+
+  /* Rich Color Gradients composed of Major Colors */
+  --gradient-aurora: linear-gradient(135deg, #f4d9a0 0%, #c8792c 40%, #e2913e 70%, #5B4632 100%);
+  --gradient-electric: linear-gradient(135deg, #c8792c 0%, #db8b3d 50%, #5B4632 100%);
+  --gradient-btn: linear-gradient(135deg, #c8792c 0%, #ba6a20 50%, #5B4632 100%);
+  --gradient-btn-hover: linear-gradient(135deg, #db8b3d 0%, #c8792c 50%, #754b25 100%);
+  --gradient-border-beam: conic-gradient(from 0deg, #f4d9a0, #c8792c, #5B4632, #f4d9a0);
 }
 
 /* ==========================================================================
    LIGHT THEME (Default or [data-theme="light"])
-   Clean, crisp, high-contrast editorial look with luminous vibrant accents
+   Warm editorial luxury look with Espresso, Champagne & Amber
    ========================================================================== */
 :root,
 [data-theme="light"] {
-  --bg-primary: #fcfcfd;
-  --bg-secondary: #f4f5f8;
-  --bg-tertiary: #ebeef4;
+  --bg-primary: #fdfbf8;
+  --bg-secondary: #f6efe4;
+  --bg-tertiary: #ede1ce;
   --bg-elevated: #ffffff;
-  --bg-subtle: #f8f9fc;
-  --bg-nav: rgba(252, 252, 253, 0.85);
+  --bg-subtle: #f9f5ed;
+  --bg-nav: rgba(253, 251, 248, 0.88);
 
-  --text-primary: #0a0e14;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-primary: #2d2116;
+  --text-secondary: #5B4632;
+  --text-muted: #846f5b;
   --text-inverse: #ffffff;
 
-  --border-subtle: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --border-hover: #3b82f6;
+  --border-subtle: #e7dac9;
+  --border-strong: #d0beaa;
+  --border-hover: #c8792c;
 
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-subtle: rgba(37, 99, 235, 0.1);
+  --accent: #c8792c;
+  --accent-hover: #b0651e;
+  --accent-subtle: rgba(200, 121, 44, 0.12);
   --accent-contrast: #ffffff;
 
-  --status-available: #10b981;
-  --status-available-subtle: rgba(16, 185, 129, 0.15);
+  --status-available: #c8792c;
+  --status-available-subtle: rgba(200, 121, 44, 0.16);
 
-  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--accent);
-  --shadow-modal: 0 12px 32px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  --shadow-subtle: 0 1px 2px rgba(91, 70, 50, 0.05);
+  --shadow-card: 0 1px 4px rgba(91, 70, 50, 0.08), 0 0 0 1px rgba(91, 70, 50, 0.06);
+  --shadow-hover: 0 6px 18px rgba(91, 70, 50, 0.14), 0 0 0 1px #c8792c;
+  --shadow-modal: 0 16px 36px rgba(91, 70, 50, 0.2), 0 0 0 1px rgba(91, 70, 50, 0.08);
 
-  --code-bg: #f1f5f9;
-  --badge-bg: #f1f5f9;
-  --badge-border: #e2e8f0;
-  --badge-text: #1e293b;
+  --code-bg: #f4efe4;
+  --badge-bg: #f4d9a0;
+  --badge-border: #dfc282;
+  --badge-text: #5B4632;
 
-  --spotlight-glow: rgba(37, 99, 235, 0.08);
-  --spotlight-secondary: rgba(121, 40, 202, 0.06);
-  --spotlight-tertiary: rgba(0, 242, 254, 0.06);
-  --card-glow: 0 0 0 1px rgba(37, 99, 235, 0.35);
-  --btn-glow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  --spotlight-glow: rgba(200, 121, 44, 0.1);
+  --spotlight-secondary: rgba(244, 217, 160, 0.25);
+  --spotlight-tertiary: rgba(91, 70, 50, 0.08);
+  --card-glow: 0 0 0 1px rgba(200, 121, 44, 0.35);
+  --btn-glow: 0 2px 8px rgba(200, 121, 44, 0.35);
 }
 
 /* ==========================================================================
    DARK THEME ([data-theme="dark"])
-   Sleek Obsidian with crisp, razor-sharp chromatic accents
+   Rich Deep Espresso with Radiant Champagne and Amber Accents
    ========================================================================== */
 [data-theme="dark"] {
-  --bg-primary: #07090e;
-  --bg-secondary: #0d1118;
-  --bg-tertiary: #131822;
-  --bg-elevated: #0f141f;
-  --bg-subtle: #0a0d14;
-  --bg-nav: #07090ee6;
+  --bg-primary: #120e0a;
+  --bg-secondary: #1a140f;
+  --bg-tertiary: #241c15;
+  --bg-elevated: #1e1712;
+  --bg-subtle: #16110c;
+  --bg-nav: rgba(18, 14, 10, 0.9);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-inverse: #07090e;
+  --text-primary: #faf5ec;
+  --text-secondary: #f4d9a0;
+  --text-muted: #bfa98e;
+  --text-inverse: #120e0a;
 
-  --border-subtle: #1e293b;
-  --border-strong: #334155;
-  --border-hover: #60a5fa;
+  --border-subtle: #3d2f22;
+  --border-strong: #5B4632;
+  --border-hover: #c8792c;
 
-  --accent: #38bdf8;
-  --accent-hover: #60a5fa;
-  --accent-subtle: rgba(56, 189, 248, 0.14);
-  --accent-contrast: #07090e;
+  --accent: #c8792c;
+  --accent-hover: #e0923f;
+  --accent-subtle: rgba(200, 121, 44, 0.18);
+  --accent-contrast: #120e0a;
 
-  --status-available: #34d399;
-  --status-available-subtle: rgba(52, 211, 153, 0.18);
+  --status-available: #e0923f;
+  --status-available-subtle: rgba(224, 146, 63, 0.2);
 
-  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.07);
-  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 0 1px #38bdf8;
-  --shadow-modal: 0 16px 40px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(244, 217, 160, 0.08);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.75), 0 0 0 1px #c8792c;
+  --shadow-modal: 0 18px 44px rgba(0, 0, 0, 0.88), 0 0 0 1px rgba(244, 217, 160, 0.12);
 
-  --code-bg: #111724;
-  --badge-bg: #111827;
-  --badge-border: #1e293b;
-  --badge-text: #e2e8f0;
+  --code-bg: #1f1711;
+  --badge-bg: #2b2017;
+  --badge-border: #5B4632;
+  --badge-text: #f4d9a0;
 
-  --spotlight-glow: rgba(56, 189, 248, 0.08);
-  --spotlight-secondary: rgba(147, 51, 234, 0.06);
-  --spotlight-tertiary: rgba(244, 63, 94, 0.05);
-  --card-glow: 0 0 0 1px rgba(56, 189, 248, 0.4);
-  --btn-glow: 0 2px 8px rgba(56, 189, 248, 0.35);
+  --spotlight-glow: rgba(200, 121, 44, 0.12);
+  --spotlight-secondary: rgba(244, 217, 160, 0.08);
+  --spotlight-tertiary: rgba(91, 70, 50, 0.25);
+  --card-glow: 0 0 0 1px rgba(200, 121, 44, 0.45);
+  --btn-glow: 0 2px 10px rgba(200, 121, 44, 0.4);
 }
-

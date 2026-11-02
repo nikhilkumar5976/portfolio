@@ -1,9 +1,15 @@
 /**
  * PROJECTS DATA REPOSITORY
  * Centralized dataset for showcase items, metrics, tech tags, and case study details.
- * Featured Creator: Nikhil Kumar
+ * 
+ * [TEMPORARY STATUS]: Set to an empty array so the portfolio displays a "Coming Soon" showcase.
+ * To restore the live project(s), uncomment the project object(s) below.
  */
 
+window.PORTFOLIO_PROJECTS = [];
+
+/*
+// ARCHIVED PROJECT DATA (Uncomment below to restore anytime)
 window.PORTFOLIO_PROJECTS = [
   {
     id: 'travelmate-ai',
@@ -30,3 +36,4 @@ window.PORTFOLIO_PROJECTS = [
     githubUrl: 'https://github.com/nikhilkumar5976'
   }
 ];
+*/

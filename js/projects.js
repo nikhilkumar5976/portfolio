@@ -19,7 +19,7 @@
     grid.innerHTML = '';
 
     if (projects.length === 0) {
-      grid.innerHTML = '<p class="text-muted">No projects found.</p>';
+      grid.innerHTML = getComingSoonHTML();
       return;
     }
 
@@ -226,6 +226,91 @@
       closeProjectModal();
     }
   });
+
+  // Temporary Coming Soon Showcase Markup
+  function getComingSoonHTML() {
+    return `
+      <div class="projects-coming-soon-card">
+        <div class="coming-soon-glow"></div>
+        
+        <div class="coming-soon-header">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>In Active Development • Coming Soon</span>
+          </div>
+          <span class="badge badge-tag font-mono">✦ Status: In Progress</span>
+        </div>
+
+        <div class="coming-soon-content">
+          <div class="coming-soon-icon-wrap" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+
+          <h3 class="coming-soon-title">Projects Coming Soon</h3>
+          
+          <p class="coming-soon-desc">
+            Exciting full-stack web applications, Django backends, and responsive frontend systems are currently being architected and built. Live interactive deployments, case studies, and GitHub repositories will be published here soon.
+          </p>
+
+          <div class="coming-soon-preview-grid">
+            <div class="preview-feature-item">
+              <div class="preview-feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <div class="preview-feature-title">Full-Stack Web Apps</div>
+                <div class="preview-feature-desc">Django backend architectures, secure auth, and REST APIs</div>
+              </div>
+            </div>
+
+            <div class="preview-feature-item">
+              <div class="preview-feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div>
+                <div class="preview-feature-title">Modern Frontends</div>
+                <div class="preview-feature-desc">Pixel-perfect HTML5, modern CSS3 layouts, and dynamic ES6+</div>
+              </div>
+            </div>
+
+            <div class="preview-feature-item">
+              <div class="preview-feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div>
+                <div class="preview-feature-title">Dynamic Features</div>
+                <div class="preview-feature-desc">Asynchronous APIs, real-time data handling, and clean UX</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="coming-soon-tags">
+            <span class="badge">Python</span>
+            <span class="badge">Django</span>
+            <span class="badge">JavaScript (ES6+)</span>
+            <span class="badge">HTML5 Semantic</span>
+            <span class="badge">Modern CSS3</span>
+            <span class="badge">RESTful APIs</span>
+          </div>
+
+          <div class="coming-soon-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Get In Touch</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/nikhilkumar5976" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>Explore GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
 
   // Initial Render
   renderProjects();

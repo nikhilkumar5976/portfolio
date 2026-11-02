@@ -117,14 +117,14 @@
       mouse.y = -1000;
     });
 
-    // Dynamic Chromatic Color Palette (Sharp solid tones)
+    // Dynamic Warm Luxury Palette based on Major Colors (#5B4632, #f4d9a0, #c8792c)
     const chromaticColors = [
-      '#00f2fe', // Electric Cyan
-      '#38bdf8', // Sky Blue
-      '#818cf8', // Indigo
-      '#a855f7', // Vivid Purple
-      '#f43f5e', // Radiant Rose
-      '#10b981'  // Emerald
+      '#c8792c', // Rich Amber
+      '#f4d9a0', // Warm Champagne
+      '#5B4632', // Deep Espresso
+      '#e0923f', // Radiant Amber
+      '#ecd39b', // Golden Sand
+      '#7a5839'  // Warm Walnut
     ];
 
     // Sharp Geometric Nodes
@@ -233,7 +233,7 @@
         const my = Math.floor(mouse.y) + 0.5;
 
         // Subtle 1px crosshair hairlines snapping around cursor (60px length)
-        ctx.strokeStyle = isDark ? 'rgba(56, 189, 248, 0.35)' : 'rgba(37, 99, 235, 0.35)';
+        ctx.strokeStyle = isDark ? 'rgba(244, 217, 160, 0.4)' : 'rgba(200, 121, 44, 0.4)';
         ctx.lineWidth = 1;
 
         ctx.beginPath();
@@ -250,7 +250,7 @@
         ctx.stroke();
 
         // Crisp central diamond reticle (12px, zero blur)
-        ctx.strokeStyle = '#00f2fe';
+        ctx.strokeStyle = '#c8792c';
         ctx.beginPath();
         ctx.moveTo(mx, my - 5);
         ctx.lineTo(mx + 5, my);
@@ -281,7 +281,7 @@
               const x2 = Math.floor(nodes[j].x) + 0.5;
               const y2 = Math.floor(nodes[j].y) + 0.5;
 
-              ctx.strokeStyle = isDark ? 'rgba(56, 189, 248, 0.28)' : 'rgba(37, 99, 235, 0.22)';
+              ctx.strokeStyle = isDark ? 'rgba(244, 217, 160, 0.3)' : 'rgba(200, 121, 44, 0.25)';
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.moveTo(x1, y1);
