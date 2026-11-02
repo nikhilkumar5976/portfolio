@@ -25,10 +25,10 @@
     localStorage.setItem(STORAGE_KEY, theme);
 
     // Update aria labels if button exists
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) {
-      toggleBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
-    }
+    const toggleBtns = document.querySelectorAll('#theme-toggle, #landing-theme-toggle');
+    toggleBtns.forEach(btn => {
+      btn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    });
   }
 
   // Toggle current theme
@@ -44,10 +44,10 @@
 
   // Bind to DOM when loaded
   document.addEventListener('DOMContentLoaded', () => {
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', toggleTheme);
-    }
+    const toggleBtns = document.querySelectorAll('#theme-toggle, #landing-theme-toggle');
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', toggleTheme);
+    });
 
     // Optional keyboard shortcut: press 'T' to toggle theme when not typing in inputs
     window.addEventListener('keydown', (e) => {

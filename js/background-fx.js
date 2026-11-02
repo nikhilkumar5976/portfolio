@@ -50,7 +50,7 @@
   // --------------------------------------------------------------------------
   function setupCardSpotlights() {
     const cards = document.querySelectorAll(
-      '.project-spotlight-card, .skill-category-card, .timeline-card, .contact-info-card, .contact-form, .hero-avatar-wrapper'
+      '.project-spotlight-card, .skill-category-card, .timeline-card, .contact-info-card, .hero-avatar-wrapper'
     );
 
     cards.forEach(card => {

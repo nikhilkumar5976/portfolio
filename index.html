@@ -30,9 +30,72 @@
   <!-- Initialize Theme Script (Inline to prevent flash) -->
   <script src="js/theme.js"></script>
 </head>
-<body>
+<body class="landing-active">
   <!-- Razor-Sharp Interactive Canvas Background (Zero Blur) -->
   <canvas id="bg-canvas" class="bg-interactive-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       LANDING SCREEN (Full-Viewport Interactive Typewriter Intro)
+       ======================================================================== -->
+  <aside id="landing-screen" class="landing-screen" aria-label="Welcome screen">
+    <div class="landing-top-bar">
+      <div class="landing-brand">
+        <span class="landing-monogram">N</span>
+        <span>Nikhil<span class="text-accent">.</span></span>
+      </div>
+
+      <div class="landing-top-actions">
+        <button id="landing-theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle theme (Shortcut: T)">
+          <!-- Moon icon for light mode (switches to dark) -->
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun icon for dark mode (switches to light) -->
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="12" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="landing-center">
+      <div class="landing-badge font-mono">
+        <span class="status-dot"></span>
+        <span>Nikhil Kumar // Full-Stack &amp; Web Developer</span>
+      </div>
+
+      <div class="landing-typewriter-box">
+        <h1 class="landing-headline">
+          <span class="landing-prompt-icon" aria-hidden="true">&gt; </span>
+          <span id="landing-typewriter" class="landing-typewriter" aria-live="polite"></span>
+          <span id="landing-cursor" class="landing-cursor" aria-hidden="true"></span>
+        </h1>
+      </div>
+
+      <p class="landing-subline font-mono">
+        Python • Django • HTML5 • CSS3 • JavaScript (ES6+)
+      </p>
+    </div>
+
+    <div class="landing-bottom">
+      <button id="landing-enter-btn" class="landing-enter-btn" type="button" aria-label="Enter Portfolio">
+        <span>Explore Portfolio</span>
+        <svg class="landing-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </button>
+      <span class="landing-hint font-mono">Scroll down or click to enter</span>
+    </div>
+  </aside>
 
   <!-- ========================================================================
        SITE HEADER & NAVIGATION
@@ -118,7 +181,7 @@
           </div>
 
           <h1 class="hero-title">
-            Crafting scalable web apps &amp; <span class="hero-title-accent">AI-driven platforms</span>.
+            Crafting scalable web apps &amp; <span class="hero-title-accent">modern interfaces</span>.
           </h1>
 
           <p class="hero-description">
@@ -143,7 +206,7 @@
               <span class="badge">HTML5 &amp; CSS3</span>
               <span class="badge">JavaScript (ES6+)</span>
               <span class="badge">Python &amp; Django</span>
-              <span class="badge">REST APIs &amp; AI Integration</span>
+              <span class="badge">REST APIs &amp; Web Services</span>
             </div>
           </div>
         </div>
@@ -315,21 +378,21 @@
             </div>
           </div>
 
-          <!-- Category 3: AI & Web Integrations -->
+          <!-- Category 3: APIs & Web Services -->
           <div class="skill-category-card">
             <div class="skill-category-header">
               <div class="skill-category-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
               </div>
-              <h3 class="skill-category-title">AI &amp; Web Services</h3>
+              <h3 class="skill-category-title">APIs &amp; Web Services</h3>
             </div>
             <div class="skill-tags-list">
-              <span class="skill-pill">AI Itinerary Synthesis</span>
-              <span class="skill-pill">Real-Time Telemetry APIs</span>
+              <span class="skill-pill">RESTful API Design</span>
               <span class="skill-pill">JSON &amp; Asynchronous Fetch</span>
-              <span class="skill-pill">Currency &amp; Budget Logic</span>
-              <span class="skill-pill">Interactive Search Filters</span>
-              <span class="skill-pill">Location &amp; Geodata Handling</span>
+              <span class="skill-pill">Third-Party Integrations</span>
+              <span class="skill-pill">Interactive Search &amp; Filters</span>
+              <span class="skill-pill">CRUD Operations</span>
+              <span class="skill-pill">DOM &amp; Event Handling</span>
             </div>
           </div>
 
@@ -361,9 +424,9 @@
       <div class="container">
         <div class="section-header" style="text-align: center;">
           <span class="section-label">03 // Track Record</span>
-          <h2 class="section-title">Experience &amp; Milestone Projects</h2>
+          <h2 class="section-title">Experience &amp; Core Training</h2>
           <p class="section-subtitle" style="margin: 0 auto;">
-            Building production web platforms, implementing clean backend logic with Django, and designing user-centric frontends.
+            Hands-on full-stack development, structuring backend logic with Django, and mastering modern responsive web interfaces.
           </p>
         </div>
 
@@ -371,7 +434,7 @@
         <div class="timeline-toggle-wrapper">
           <div class="timeline-toggle" role="tablist">
             <button type="button" class="timeline-tab-btn active" data-tab="experience" role="tab" aria-selected="true">
-              Projects &amp; Experience
+              Developer Experience
             </button>
             <button type="button" class="timeline-tab-btn" data-tab="education" role="tab" aria-selected="false">
               Education &amp; Core Training
@@ -381,54 +444,30 @@
 
         <!-- Experience Content -->
         <div id="timeline-experience" class="timeline">
-          <!-- Item 1: TravelMate AI -->
+          <!-- Item: Full-Stack & Web Development -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-meta">
-                <h3 class="timeline-role">Full-Stack Developer &amp; Creator</h3>
-                <span class="timeline-date">2024 — Present</span>
+                <h3 class="timeline-role">Full-Stack &amp; Web Developer</h3>
+                <span class="timeline-date">2023 — Present</span>
               </div>
-              <div class="timeline-company">TravelMate AI • Production Project</div>
+              <div class="timeline-company">Independent Development &amp; Open Source</div>
               <p class="timeline-desc">
-                Architected and developed TravelMate AI, an intelligent travel curation and itinerary builder tailored for exploring India's iconic cities with live ₹ INR budget telemetry.
+                Dedicated to full-stack web engineering: mastering Python &amp; Django for backend architecture, alongside responsive modern frontend systems using semantic HTML5, CSS3, and JavaScript.
               </p>
               <ul class="timeline-highlights">
-                <li>Engineered backend application using Python and Django, structuring models, authentication, middleware, and API endpoints.</li>
-                <li>Designed sleek, modern dark-mode user interface using HTML5, CSS3, and JavaScript with interactive search, instant suggestions, and glowing status badges.</li>
-                <li>Integrated real-time AI itinerary synthesis algorithms and currency telemetry across top destinations including Goa, Manali, Jaipur, Udaipur, and Varanasi.</li>
+                <li>Engineered backend application structures with Python &amp; Django, configuring database models, authentication, middleware, and RESTful APIs.</li>
+                <li>Built modular CSS architectures with customizable theme variables, flexbox/grid systems, and zero external dependencies.</li>
+                <li>Implemented responsive mobile-first layouts and interactive client-side logic using modern vanilla JavaScript (ES6+).</li>
               </ul>
               <div class="timeline-tags">
                 <span class="badge badge-tag">Python</span>
                 <span class="badge badge-tag">Django</span>
                 <span class="badge badge-tag">JavaScript</span>
-                <span class="badge badge-tag">CSS3</span>
-                <span class="badge badge-tag">HTML5</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 2: Web Application Development -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta">
-                <h3 class="timeline-role">Web &amp; Frontend Developer</h3>
-                <span class="timeline-date">2023 — 2024</span>
-              </div>
-              <div class="timeline-company">Independent Development &amp; Open Source</div>
-              <p class="timeline-desc">
-                Focused on mastering core web standards: semantic HTML5, modern CSS3 layout systems (Flexbox &amp; Grid), asynchronous JavaScript, and RESTful architectures.
-              </p>
-              <ul class="timeline-highlights">
-                <li>Built modular CSS architectures with customizable theme variables and zero external dependencies.</li>
-                <li>Implemented responsive mobile-first layouts compatible across modern desktop and mobile browsers.</li>
-                <li>Developed interactive client-side logic using vanilla JavaScript without framework overhead.</li>
-              </ul>
-              <div class="timeline-tags">
                 <span class="badge badge-tag">HTML5</span>
                 <span class="badge badge-tag">CSS3</span>
-                <span class="badge badge-tag">JavaScript</span>
+                <span class="badge badge-tag">REST APIs</span>
                 <span class="badge badge-tag">Git</span>
               </div>
             </div>
@@ -486,107 +525,76 @@
          ---------------------------------------------------------------------- -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" style="text-align: center;">
           <span class="section-label">04 // Get In Touch</span>
           <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
-          <p class="section-subtitle">
-            Whether you have an exciting full-stack role, need a Django &amp; frontend web application built, or want to talk about TravelMate AI, reach out anytime!
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Whether you have an exciting full-stack role, need a Django &amp; frontend web application built, or want to discuss technical opportunities, reach out anytime!
           </p>
         </div>
 
-        <div class="contact-grid">
-          <!-- Left: Direct Info & Socials -->
-          <div>
-            <p style="margin-bottom: var(--space-4); font-size: var(--text-base); color: var(--text-secondary);">
-              Actively open to software engineer / web developer opportunities, freelance projects, and tech collaborations.
-            </p>
+        <div class="contact-wrapper">
+          <p class="contact-lead-text">
+            Actively open to software engineer / web developer opportunities, freelance projects, and tech collaborations.
+          </p>
 
-            <div class="contact-info-list">
-              <div class="contact-info-card">
-                <div class="contact-info-left">
-                  <div class="contact-info-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  </div>
-                  <div>
-                    <div class="contact-info-label">Direct Email</div>
-                    <a href="mailto:nikhilkhatri360@gmail.com" class="contact-info-val" style="color: var(--text-primary); text-decoration: none;">nikhilkhatri360@gmail.com</a>
-                  </div>
+          <div class="contact-info-list">
+            <div class="contact-info-card">
+              <div class="contact-info-left">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
-                <button type="button" class="btn btn-sm btn-secondary" data-copy-text="nikhilkhatri360@gmail.com" aria-label="Copy email address">
-                  <span>Copy</span>
-                </button>
-              </div>
-
-              <div class="contact-info-card">
-                <div class="contact-info-left">
-                  <div class="contact-info-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                  </div>
-                  <div>
-                    <div class="contact-info-label">Location &amp; Timezone</div>
-                    <div class="contact-info-val">India (UTC+05:30) • Remote Friendly</div>
-                  </div>
+                <div>
+                  <div class="contact-info-label">Direct Email</div>
+                  <a href="mailto:nikhilkhatri360@gmail.com" class="contact-info-val" style="color: var(--text-primary); text-decoration: none;">nikhilkhatri360@gmail.com</a>
                 </div>
-                <span class="badge">Open to Roles</span>
               </div>
-
-              <div class="contact-info-card">
-                <div class="contact-info-left">
-                  <div class="contact-info-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                  </div>
-                  <div>
-                    <div class="contact-info-label">Current Availability</div>
-                    <div class="contact-info-val">Immediate / Ready to Join</div>
-                  </div>
-                </div>
-                <div class="status-badge" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">Active</div>
-              </div>
+              <button type="button" class="btn btn-sm btn-secondary" data-copy-text="nikhilkhatri360@gmail.com" aria-label="Copy email address">
+                <span>Copy</span>
+              </button>
             </div>
 
-            <!-- Social Links Strip -->
-            <div style="margin-top: var(--space-8);">
-              <span class="hero-strip-label" style="display: block; margin-bottom: var(--space-3);">Profiles &amp; Code:</span>
-              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-                <a href="https://github.com/nikhilkumar5976" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Profile">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                  <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/nikhil-kumar-50b82935b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn Profile">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                  <span>LinkedIn</span>
-                </a>
-                <a href="mailto:nikhilkhatri360@gmail.com" class="btn btn-sm btn-primary" aria-label="Send direct email">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  <span>Email Me</span>
-                </a>
+            <div class="contact-info-card">
+              <div class="contact-info-left">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Location &amp; Timezone</div>
+                  <div class="contact-info-val">India (UTC+05:30) • Remote Friendly</div>
+                </div>
               </div>
+              <span class="badge">Open to Roles</span>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-left">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-info-label">Current Availability</div>
+                  <div class="contact-info-val">Immediate / Ready to Join</div>
+                </div>
+              </div>
+              <div class="status-badge" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">Active</div>
             </div>
           </div>
 
-          <!-- Right: Interactive Form -->
-          <div class="contact-form">
-            <form id="contact-form" novalidate>
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Your Name</label>
-                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Email Address</label>
-                <input type="email" id="contact-email" name="email" class="form-input" placeholder="rahul@company.com" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contact-message" class="form-label">Message / Project Inquiry</label>
-                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Hi Nikhil, I'd like to talk about a full-stack web project / open developer role..." required></textarea>
-              </div>
-
-              <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width: 100%;">
-                <span>Send Message to Nikhil</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-            </form>
+          <!-- Social Links Strip -->
+          <div class="contact-actions">
+            <a href="mailto:nikhilkhatri360@gmail.com" class="btn btn-primary" aria-label="Send direct email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Email Me</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nikhil-kumar-50b82935b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="LinkedIn Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/nikhilkumar5976" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
       </div>
@@ -670,6 +678,7 @@
   <script src="js/projects.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/background-fx.js"></script>
+  <script src="js/landing.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
