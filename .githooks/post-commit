@@ -1,0 +1,6 @@
+#!/bin/sh
+# Git post-commit hook
+# Automatically pushes changes to origin main upon any commit
+
+echo "[Git Hook] Auto-pushing commit to origin main..."
+git push origin main
