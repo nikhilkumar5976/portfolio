@@ -22,7 +22,7 @@ portfolio/
 │   └── main.js                # Timeline toggle (Work/Edu), quick email copy, contact form validator & clock
 ├── assets/
 │   ├── images/                # Screenshots and profile avatar
-│   │   ├── avatar.jpg         # Nikhil Kumar's portrait
+│   │   ├── avatar-3d.png      # Nikhil Kumar's 3D avatar
 │   │   └── project-travelmate.png # TravelMate AI flagship project screenshot
 │   ├── icons/                 # SVG icon assets
 │   └── docs/                  # Resumes, CVs, and credentials
